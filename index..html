@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="img/menininha.svg">
+            <img src="img/programador.svg">
         </div>
         <div class="form">
             <form action="#">
@@ -29,8 +29,8 @@
                         <input id="text" type="text" name="text" placeholder="Digite aqui" required>
                     </div>
                     <div class="input-box">
-                        <label for="text">Descrição</label>
-                        <input id="text" type="text" name="text" placeholder="Digite aqui" required>
+                        <label for="textarea">Descrição</label>
+                        <input id="textarea" type="text" name="textarea" placeholder="Digite aqui" required>
                     </div>
                     <div class="input-box">
                         <label for="firstname">Primeiro nome</label>
@@ -65,6 +65,7 @@
                     <option>Segurança</option>
                     <option>SUSP</option>
                     </div>
+                    <br>
                     <div class="input-box">
                         <label for="text">Setor</label>
                         <input id="text" type="text" name="text" placeholder="Setor" required>
@@ -77,8 +78,8 @@
                         <label for="email">E-mail</label>
                         <input id="email" type="email" name="email" placeholder="Digite seu email" required>
                     </div>
-                    <div id="check">
-                    <label for="Solicitacao">Solicitação</label>
+                    <div class="solicitacao-input">
+                    <label for="Solicitacao">Solicitação:</label>
                     <label>
                     <input type="radio" name="solicitacao" value="Acesso a pastas / Criação de usuário">Acesso a pastas / Criação de usuário
                     </label>
@@ -117,7 +118,7 @@
                     <div class="campo">
                     <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
                     <label>Imagem de perfil: <input type="file" name="image"></label>
-                    <div><button><a href="#">Entrar</a></button></div>
+                    <div class="continue-button"><button><a href="#">Enviar chamado</a></button></div>
 
                     
 
