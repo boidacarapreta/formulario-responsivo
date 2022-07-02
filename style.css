@@ -158,6 +158,23 @@ body {
     background-color: #1c242e;
 }
 
+form input,select,
+textarea,
+button,
+text,
+.campo{
+    outline: unset;
+    padding: 30px;
+    min-width: 400px;
+    border: 2px solid #1d242e;
+    border-radius: 20px;
+}
+
+
+
+
+
+
 @media screen and (max-width: 1330px) {
     .form-image {
         display: none;
