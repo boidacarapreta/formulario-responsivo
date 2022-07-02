@@ -111,14 +111,14 @@ body {
 
 #secretaria {
     font-size: 1rem;
-        font-weight: 400;
-        color: #fff;
-        border-radius: 15px;
-        background-color: #161c24;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #161c24;
 }
 
 .solicitacao-input {
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: 400;
     color: #fff;
     border-radius: 5px;
@@ -127,7 +127,7 @@ body {
 .solicitacao-input input {
     margin-right: 0.35rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     margin-top: 0.62rem;
     padding: 0 0.5rem;
 }
@@ -136,6 +136,9 @@ body {
     font-size: 1rem;
     font-weight: 400;
     color: #fff;
+    display: grid;
+    grid-template-columns: 0.8em auto;
+    gap: 0.5em;
 }
 
 .input-box label {
@@ -199,7 +202,14 @@ text,
     font-size: 1em;
 }
 
-
+.fieldset {
+    border: none;
+    display: flex;
+    text-align: column;
+    display: flex;
+    flex-direction: center;
+    align-items: center
+}
 
 @media screen and (max-width: 1330px) {
     .form-image {
