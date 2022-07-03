@@ -16,7 +16,7 @@
             <img src="img/programador.svg">
         </div>
         <div class="form">
-            <form action="#">
+            <form  name="chamados" action="#">
                 <div class="form-header">
                     <div class="title">
                         <h1>Preencha com seus dados</h1>
@@ -26,20 +26,21 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="text">Assunto do chamado</label>
-                        <input id="text" type="text" name="text" placeholder="Digite aqui" required>
+                        <input id="titulo" type="text" name="titulo" placeholder="Digite aqui" required>
                     </div>
                     <div class="input-box">
                         <label for="textarea">Descrição</label>
-                        <input id="textarea" type="text" name="textarea" placeholder="Digite aqui" required>
+                        <input id="descricao" type="text" name="descricao" placeholder="Digite aqui" required>
               
                     <div class="input-box">
                         <label for="firstname">Primeiro nome</label>
-                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>                        <label for="lastname">Sobrenome</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required>                        
+                        <label for="lastname">Sobrenome</label>
+                        <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
                     </div>
                     <div class="campo">
                     <label>Secretaria</label>
-                    <select id="Secretaria" required>
+                    <select id="Secretaria" name="secretaria" required>
                     <option selected disabled value="">Selecione</option>
                     <option>Administração</option>
                     <option>Assistência Social</option>
@@ -65,18 +66,18 @@
                     <br>
                     <div class="input-box">
                         <label for="text">Setor</label>
-                        <input id="text" type="text" name="text" placeholder="Setor" required>
+                        <input id="setor" type="text" name="setor" placeholder="Setor" required>
                     </div>
                     <div class="input-box">
                         <label for="number">Ramal ou número para contato</label>
-                        <input id="number" type="tel" name="number" placeholder="Digite seu ramal ou número para contato" required>
+                        <input id="ramal" type="tel" name="ramal" placeholder="Digite seu ramal ou número para contato" required>
                     </div>
                     <div class="input-box">
                         <label for="email">E-mail</label>
                         <input id="email" type="email" name="email" placeholder="Digite seu email" required>
                     </div>
                     <div class="solicitacao-input">
-                    <label for="Solicitacao">Solicitação:</label>
+                    <label for="Solicitacao" name="solicitacao" id="solicitacao">Solicitação:</label>
                     <label>
                     <input type="radio" name="solicitacao" value="Acesso a pastas / Criação de usuário">Acesso a pastas
                     </label>
@@ -113,17 +114,30 @@
                     </div>
                     <div class="input-box">
                         <label for="text">Patrimônio</label>
-                        <input id="text" type="text" name="text" placeholder="Patrimônio" required>
+                        <input id="patrimonio" type="text" name="patrimonio" placeholder="Patrimônio" required>
                     </div>
                     <div class="campo">
                     <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
-                    <label>Anexos<input type="file" name="image"></label>
+                    <label>Anexos<input type="file" id="anexos" name="anexos"></label>
                     <div class="continue-button"><button><a href="#">Enviar chamado</a></button></div>
 
                     
 
                 
             </form>
+
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwBF1Hdn-NIT4QWW816vNWbROXctFGQx8ldz0BcZilRJlLGrIurKXF4jhvvQp0TBzGt3g/exec'
+                const form = document.forms['chamados']
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                        .then(response => console.log('Success!', response))
+                        .catch(error => console.error('Error!', error.message))
+                })
+            </script>
         </div>
     </div>
 
