@@ -120,6 +120,9 @@
                     <label>Anexos<input type="file" id="anexos" name="anexos"></label>
                     <a href="https://obrigada.neocities.org/"><button>Enviar chamado</button></a>
                     <div id="form_alerts"></div>
+                    <div id="id">Sua ID:</div>
+                    
+                    
                 
             </form>
 
@@ -134,6 +137,10 @@
                         .then(response => $("#form_alerts").html("<div class='alert alert-success'>Chamado enviado! Um dos nossos técnicos entrará em contato."))
                         .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Chamado não enviado. Ligue no 4310"))
                 })
+
+                let u = Date.now().toString(16);
+                    let guid = [u.substr(0, 2), u.substr(2, 1), '40-8' + u.substr(2, 1),].join('-');
+                    document.getElementById("id").innerHTML = guid;
             </script>
         </div>
     </div>
