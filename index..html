@@ -16,7 +16,7 @@
             <img src="img/programador.svg">
         </div>
         <div class="form">
-            <form  name="chamados" action="https://obrigada.neocities.org/">
+            <form name="chamados" action="https://obrigada.neocities.org/">
                 <div class="form-header">
                     <div class="title">
                         <h1>Preencha com seus dados</h1>
@@ -30,120 +30,128 @@
                     <div class="input-box">
                         <label for="textarea">Descrição</label>
                         <input id="descricao" type="text" name="descricao" placeholder="Digite aqui" required>
-              
-                    <div class="input-box">
-                        <label for="firstname">Primeiro nome</label>
-                        <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required>                        
-                        <label for="lastname">Sobrenome</label>
-                        <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
-                    </div>
-                    <div class="campo">
-                    <label>Secretaria</label>
-                    <select id="Secretaria" name="secretaria" required>
-                    <option selected disabled value="">Selecione</option>
-                    <option>Administração</option>
-                    <option>Assistência Social</option>
-                    <option>Casa Civil</option>
-                    <option>Comunicação Social</option>
-                    <option>Controle Interno e Transparência</option>
-                    <option>Cultura e Turismo</option>
-                    <option>Desenvolvimento Econômico e Inovação</option>
-                    <option>Educação</option>
-                    <option>Esporte e Lazer</option>
-                    <option>Finanças</option>
-                    <option>Gabinete do vice-prefeito</option>
-                    <option>Infraestrutura</option>
-                    <option>Meio ambiente</option>
-                    <option>Planejamento e Assuuntos Estratégicos</option>
-                    <option>Procuradoria Geral</option>
-                    <option>Receita</option>
-                    <option>São José Previdência</option>
-                    <option>Saúde</option>
-                    <option>Segurança</option>
-                    <option>SUSP</option>
-                    </div>
-                    <br>
-                    <div class="input-box">
-                        <label for="text">Setor</label>
-                        <input id="setor" type="text" name="setor" placeholder="Setor" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="number">Ramal ou número para contato</label>
-                        <input id="ramal" type="tel" name="ramal" placeholder="Digite seu ramal ou número para contato" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu email" required>
-                    </div>
-                    <div class="solicitacao-input">
-                    <label for="Solicitacao" name="solicitacao" id="solicitacao">Solicitação:</label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Acesso a pastas / Criação de usuário">Acesso a pastas
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Acesso a pastas / Criação de usuário">Criação de usuário
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Certificado Digital">Certificado Digital
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Computador">Computador
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="E-mail">E-mail
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Monitor">Monitor
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Mouse / teclado">Mouse / teclado
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Rede">Rede
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Sites / Softwares">Sites / Softwares
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Telefone">Telefone
-                    </label>
-                    <label>
-                    <input type="radio" name="solicitacao" value="Outros">Outros
-                    </label>
-                    </div>
-                    <div class="input-box">
-                        <label for="text">Patrimônio</label>
-                        <input id="patrimonio" type="text" name="patrimonio" placeholder="Patrimônio" required>
-                    </div>
-                    <div class="campo">
-                    <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
-                    <label>Anexos<input type="file" id="anexos" name="anexos"></label>
-                    <a href="https://obrigada.neocities.org/"><button>Enviar chamado</button></a>
-                    <div id="form_alerts"></div>
-                    <div id="id">Sua ID:</div>
-                    
-                    
-                
-            </form>
 
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbwBF1Hdn-NIT4QWW816vNWbROXctFGQx8ldz0BcZilRJlLGrIurKXF4jhvvQp0TBzGt3g/exec'
-                const form = document.forms['chamados']
+                        <div class="input-box">
+                            <label for="firstname">Primeiro nome</label>
+                            <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required>
+                            <label for="lastname">Sobrenome</label>
+                            <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome"
+                                required>
+                        </div>
+                        <div class="campo">
+                            <label>Secretaria</label>
+                            <select id="Secretaria" name="secretaria" required>
+                                <option selected disabled value="">Selecione</option>
+                                <option>Administração</option>
+                                <option>Assistência Social</option>
+                                <option>Casa Civil</option>
+                                <option>Comunicação Social</option>
+                                <option>Controle Interno e Transparência</option>
+                                <option>Cultura e Turismo</option>
+                                <option>Desenvolvimento Econômico e Inovação</option>
+                                <option>Educação</option>
+                                <option>Esporte e Lazer</option>
+                                <option>Finanças</option>
+                                <option>Gabinete do vice-prefeito</option>
+                                <option>Infraestrutura</option>
+                                <option>Meio ambiente</option>
+                                <option>Planejamento e Assuuntos Estratégicos</option>
+                                <option>Procuradoria Geral</option>
+                                <option>Receita</option>
+                                <option>São José Previdência</option>
+                                <option>Saúde</option>
+                                <option>Segurança</option>
+                                <option>SUSP</option>
+                        </div>
+                        <br>
+                        <div class="input-box">
+                            <label for="text">Setor</label>
+                            <input id="setor" type="text" name="setor" placeholder="Setor" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="number">Ramal ou número para contato</label>
+                            <input id="ramal" type="tel" name="ramal"
+                                placeholder="Digite seu ramal ou número para contato" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+                        </div>
+                        <div class="solicitacao-input">
+                            <label for="Solicitacao" name="solicitacao" id="solicitacao">Solicitação:</label>
+                            <label>
+                                <input type="radio" name="solicitacao"
+                                    value="Acesso a pastas / Criação de usuário">Acesso a pastas
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao"
+                                    value="Acesso a pastas / Criação de usuário">Criação de usuário
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="Certificado Digital">Certificado Digital
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="Computador">Computador
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="E-mail">E-mail
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="Monitor">Monitor
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="Mouse / teclado">Mouse / teclado
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="Rede">Rede
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="Sites / Softwares">Sites / Softwares
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="Telefone">Telefone
+                            </label>
+                            <label>
+                                <input type="radio" name="solicitacao" value="Outros">Outros
+                            </label>
+                        </div>
+                        <div class="input-box">
+                            <label for="text">Patrimônio</label>
+                            <input id="patrimonio" type="text" name="patrimonio" placeholder="Patrimônio" required>
+                        </div>
+                        <div class="campo">
+                            <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
+                                <label>Anexos<input type="file" id="anexos" name="anexos"></label>
+                                <a href="https://obrigada.neocities.org/"><button>Enviar chamado</button></a>
+                                <div id="form_alerts"></div>
+                                <div name="id" class="campo"> Guarde sua ID:
+                                    <div id="id">Guarde sua ID:</div>
+                                </div>
 
-                form.addEventListener('submit', e => {
-                    e.preventDefault()
-                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                        .then(response => $("#form_alerts").html("<div class='alert alert-success'>Chamado enviado! Um dos nossos técnicos entrará em contato."))
-                        .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Chamado não enviado. Ligue no 4310"))
-                })
 
-                let u = Date.now().toString(16);
-                    let guid = [u.substr(0, 2), u.substr(2, 1), '40-8' + u.substr(2, 1),].join('-');
-                    document.getElementById("id").innerHTML = guid;
-            </script>
-        </div>
-    </div>
+
+                            </form>
+
+                            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                            <script>
+                                const scriptURL = 'https://script.google.com/macros/s/AKfycbwBF1Hdn-NIT4QWW816vNWbROXctFGQx8ldz0BcZilRJlLGrIurKXF4jhvvQp0TBzGt3g/exec'
+                                const form = document.forms['chamados']
+
+                                form.addEventListener('submit', e => {
+                                    e.preventDefault()
+                                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                                        .then(response => $("#form_alerts").html("<div class='alert alert-success'>Chamado enviado! Um dos nossos técnicos entrará em contato."))
+                                        .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Chamado não enviado. Ligue no 4310"))
+                                })
+                            </script>
+                            <script>
+                                let u = Date.now().toString(8);
+                                let guid = [u.substr(0, 4), u.substr(4, 2), '40-8' + u.substr(2, 4),].join('-');
+                                document.getElementById("id").innerHTML = guid;
+                            </script>
+                        </div>
+                    </div>
 
 </body>
+
 </html>

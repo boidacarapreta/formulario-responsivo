@@ -126,10 +126,10 @@ body {
 }
 
 .solicitacao-input input {
-    margin-right: 0.35rem;
+    margin-right: 35rem;
     display: flex;
     justify-content: flex-end;
-    margin-top: 0.62rem;
+    margin-top: 0.25rem;
     padding: 0 0.5rem;
 }
 
