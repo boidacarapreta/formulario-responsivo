@@ -16,13 +16,12 @@
             <img src="img/programador.svg">
         </div>
         <div class="form">
-            <form  name="chamados" action="#">
+            <form  name="chamados" action="https://obrigada.neocities.org/">
                 <div class="form-header">
                     <div class="title">
                         <h1>Preencha com seus dados</h1>
                     </div>
                 </div>
-
                 <div class="input-group">
                     <div class="input-box">
                         <label for="text">Assunto do chamado</label>
@@ -119,7 +118,8 @@
                     <div class="campo">
                     <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
                     <label>Anexos<input type="file" id="anexos" name="anexos"></label>
-                    <div class="continue-button"><button><a href="https://obrigada.neocities.org/">Enviar chamado</a></button></div>
+                    <a href="https://obrigada.neocities.org/"><button>Enviar chamado</button></a>
+                    <div id="form_alerts"></div>
                 
             </form>
 
@@ -131,8 +131,8 @@
                 form.addEventListener('submit', e => {
                     e.preventDefault()
                     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                        .then(response => console.log('Success!', response))
-                        .catch(error => console.error('Error!', error.message))
+                        .then(response => $("#form_alerts").html("<div class='alert alert-success'>Chamado enviado! Um dos nossos técnicos entrará em contato."))
+                        .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Chamado não enviado. Ligue no 4310"))
                 })
             </script>
         </div>
