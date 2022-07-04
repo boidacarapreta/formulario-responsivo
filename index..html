@@ -17,6 +17,7 @@
         </div>
         <div class="form">
             <form  name="chamados" action="#">
+                <div id="form_alerts"></div>
                 <div class="form-header">
                     <div class="title">
                         <h1>Preencha com seus dados</h1>
@@ -134,8 +135,8 @@
                 form.addEventListener('submit', e => {
                     e.preventDefault()
                     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                        .then(response => console.log('Success!', response))
-                        .catch(error => console.error('Error!', error.message))
+                        .then(response =>$("form_alerts").html("<div class='alert alert-sucess'>Chamado enviado com sucesso!</div>"))
+                        .catch(error => $("form_alerts").html("<div class='alert alert-danger'>Erro! Chamado não enviado. Favor ligar no 4310.</div>"))
                 })
             </script>
         </div>
