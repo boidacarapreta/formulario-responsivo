@@ -55,7 +55,7 @@
                                 <option>Gabinete do vice-prefeito</option>
                                 <option>Infraestrutura</option>
                                 <option>Meio ambiente</option>
-                                <option>Planejamento e Assuuntos Estratégicos</option>
+                                <option>Planejamento e Assuntos Estratégicos</option>
                                 <option>Procuradoria Geral</option>
                                 <option>Receita</option>
                                 <option>São José Previdência</option>
@@ -84,7 +84,7 @@
                                     value="Acesso a pastas / Criação de usuário">Acesso a pastas
                             </label>
                             <label>
-                                <input type="radio" name="solicitacao"
+                                <input type="radio" name="solicitacao" required
                                     value="Acesso a pastas / Criação de usuário">Criação de usuário
                             </label>
                             <label>
@@ -122,19 +122,36 @@
                         <div class="campo">
                             <form action="processa_imagem_perfil.php" method="post" enctype="multipart/form-data">
                                 <label>Anexos<input type="file" id="anexos" name="anexos"></label>
-                                <a href="https://obrigada.neocities.org/"><button>Enviar chamado</button></a>
-                                <div id="form_alerts"></div>
-                                <div name="sua id" class="campo"> Guarde sua ID:
-                                    <div name="id" id="id" type="id"></div>
                                 </div>
-
-
-
+                                <a href="https://obrigada.neocities.org/"><button id="generateUUID" onclick="onClick()";>Enviar chamado</button></a>
+                                <div id="form_alerts"></div>
+                                <label for="uuid"></label>
+                                <div class="input-box" id="uuid">Guarde sua id:</div>
+                               
                             </form>
 
+
+                            <script>
+                            function newId(base) {
+                                    return [
+                                        Math.random,
+                                        function () { return (newId.last ? windowId.last + Math.random() : Math.random()) },
+                                        Math.random,
+                                        Date.now,
+                                        Math.random
+                                    ].map(function (fn) {
+                                        return fn().toString(base || (8 + (Math.random() * 10))).substr(-2);
+                                    }).join('-');
+                                }
+
+                                var demo = function (base) {
+                                    document.getElementById('uuid').textContent = newId(base);
+                                }
+                                demo(16);
+                            </script>
                             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                             <script>
-                                const scriptURL = 'https://script.google.com/macros/s/AKfycbwBF1Hdn-NIT4QWW816vNWbROXctFGQx8ldz0BcZilRJlLGrIurKXF4jhvvQp0TBzGt3g/exec'
+                                const scriptURL = 'https://script.google.com/macros/s/AKfycbyOAY7WhbXa7QjlaLSn-XBC3kOBtAydZP5iW1ghXtytuYqTQwtSVIeBIDNvHDaDhuVS/exec'
                                 const form = document.forms['chamados']
 
                                 form.addEventListener('submit', e => {
@@ -143,29 +160,6 @@
                                         .then(response => $("#form_alerts").html("<div class='alert alert-success'>Chamado enviado! Um dos nossos técnicos entrará em contato."))
                                         .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Chamado não enviado. Ligue no 4310"))
                                 })
-                            </script>
-                            <script>
-                                function generateUUID() { // Public Domain/MIT
-                                    var d = new Date().getTime();//Timestamp
-                                    var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now() * 1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
-                                    return 'xxxx-4xxx-yxxx'.replace(/[xy]/g, function (c) {
-                                        var r = Math.random() * 16;//random number between 0 and 16
-                                        if (d > 0) {//Use timestamp until depleted
-                                            r = (d + r) % 16 | 0;
-                                            d = Math.floor(d / 16);
-                                        } else {//Use microseconds since page-load if supported
-                                            r = (d2 + r) % 16 | 0;
-                                            d2 = Math.floor(d2 / 16);
-                                        }
-                                        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-                                    });
-                                }
-                                var onClick = function () {
-                                    document.getElementById('id').textContent = generateUUID();
-                                }
-                                onClick();
-                                google.script.run.gs_generateUUID()
-
                             </script>
                         </div>
                     </div>
