@@ -1,0 +1,11 @@
+{
+  "name": "formulario-responsivo",
+  "version": "0.1.0",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
